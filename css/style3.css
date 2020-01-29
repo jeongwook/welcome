@@ -1,0 +1,358 @@
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+    display: block;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+/* Global Attributes */
+/* temporary */
+.points img {
+    width: 580px;
+    height: 458px;
+}
+
+@font-face { 
+    font-family: 'Calluna';
+    src: url('fonts/exljbris - Calluna-It.otf');
+}
+
+body {
+    background-color: white;
+    font-family: Calluna;  
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1366px;
+    /* min-width: 768px; */
+    border: 1px solid red;
+    margin: 0px auto;
+    overflow: hidden;
+}
+
+.top-nav a:hover {
+    color: #828282; 
+    font-weight: bold; 
+}
+
+/* Header */
+header {
+    /* height: 120px; */
+    min-height: 100px;
+    display: grid;
+    align-items: center;
+}
+
+header .container {
+    width: 100%; 
+    overflow: auto;
+}
+
+/* Logo */
+header .logo {
+    float: left;
+} 
+/* End of Logo */
+
+/* Navigation */
+/* Hide both icons tablet/mobile icons*/
+header .menu-btn, header .menu-icon{
+    display: none;
+}
+
+header nav {
+    clear: none;
+    float: right;
+    max-height: none;
+}
+
+header li {
+    float: left;
+    display: inline;
+    margin-right: 56px;
+    /* margin-right: 4.10%; */
+}
+
+header a {
+    color: black;
+    text-decoration: none;
+}
+
+header .top-nav a, .intro .smaller-text {
+    text-transform: uppercase;
+}
+
+header .current {
+    font-weight: bold; 
+}
+/* End of Navigation */
+
+/* Intro */
+.intro {
+    position: relative;
+    width: 100%;
+    /* min-height: 470px; */
+    height: 0;
+    padding-top: 61.35%;
+}
+
+.intro .line {
+    top: 0;
+    position: absolute;
+    left: 50%;
+    height: 100%;
+    border-left: 2px solid black;
+    margin-left: -1px;
+    z-index: 3;
+}
+
+/* .intro .img-container {
+    position: absolute;
+    width: 63.75%;
+    width: 63.66%;
+    border: 1px solid green;
+} */
+
+.intro figure {
+    position: absolute;
+    top: 0;
+    width: 63.75%;
+    /* width: 100%; */
+    /* height: 0;  */
+    /* WHY DO I NEED THIS */
+    /* padding-bottom: 84.85%; */
+    height: 88.10%;
+    overflow: hidden;
+}
+
+.intro figure img {
+    position: absolute;
+    z-index: 1;
+    width: 142.2%;
+    bottom: -4.3%;
+    right: 0;
+}
+
+.intro hr {
+    position: absolute;
+    border: none;
+    background-color: black;
+    width: 1.25%;
+    height: 2px;
+    bottom: -2px;
+    left: 0px;
+    right: 0px;
+    margin: 0px auto;
+}
+
+.intro .intro-text {
+    position: absolute;
+    left: 50%;
+    /* margin-left: 1px; */
+    z-index: 2;
+    background-color: #bbc7c7;
+    width: 46.12%;
+    height: 74.3%;
+    opacity: 0.90;
+    bottom: 18.6%;
+}
+/* End of Intro */
+
+/* Simple Header */
+.simple-header {
+    display: grid;
+    width: 100%;
+    height: 0;
+    padding-bottom: 10.25%;
+    align-items: center;
+    justify-content: center;
+}
+
+.simple-header span {
+    border: 1px solid yellow;
+}
+/* End of Simple Header */
+
+/* Points */
+.points {
+    width: 85.07%;
+    margin: 0px auto;
+    border: 1px solid blue;
+}
+
+.points .point-row {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    border: 1px solid purple;
+}
+
+.points img, .points .point-container {
+    float: left;
+    width: 50%;
+    /* margin-bottom: 92px; */
+    margin-bottom: 7.92%;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid blue;
+}
+
+.points img {
+    margin-top: 26px;
+    /* height: 458px; */
+    border: 1px solid red;
+}
+
+.point-row:nth-child(even) .point-container{
+    float:right;
+}
+/* End of Points */
+
+@media screen and (max-width: 992px){
+    /* Header */
+    /* Navigation */
+    /* Menu */
+    header nav {
+        float: none;
+        width: 100%;
+    }
+
+    header ul {
+        list-style: none;
+        background-color: black;
+    }
+
+    header li {
+        float: none;
+    }
+
+    header li a {
+        display: block;
+        padding: 20px 20px;
+        text-decoration: none;
+        color: white;
+    }
+
+    header .top-nav {
+        clear: both; /* clears both sides to put it separately */
+        max-height: 0px; /* makes the menu dissapear */
+        transition: max-height .2s ease-out; /* eases out the menu (higher the slower) */
+        overflow: hidden;
+    }
+    /* End of Menu */
+
+    /* Menu Icon */
+    header .menu-icon {
+        cursor: pointer;
+        display: block;
+        float: right;
+        padding: 28px 20px;
+        position: relative;
+        user-select: none;
+    }
+
+    /* adds the middle line */
+    header .menu-icon .navicon {
+        background: #333;
+        display: block;
+        height: 2px;
+        position: relative;
+        transition: background .2s ease-out;
+        width: 18px;
+    }
+
+    /* adds the before and after line */
+    header .menu-icon .navicon:before,
+    header .menu-icon .navicon:after {
+        background: #333;
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        transition: all .2s ease-out;
+        width: 100%;
+    }
+
+    /* spaces out the lines */
+    header .menu-icon .navicon:before {
+        top: 4px;
+    }
+
+    header .menu-icon .navicon:after {
+        top: -4px;
+    }
+    /* End of Menu Icon */
+
+    /* Menu Button */
+    /* when checked, increase height of menu */
+    header .menu-btn:checked ~ .top-nav {
+        max-height: 240px;
+    }
+
+    /* get rid of the icon */
+    header .menu-btn:checked ~ .menu-icon .navicon {
+        background: transparent;
+    }
+
+    /* rotate the other 2 lines to form an x */
+    header .menu-btn:checked ~ .menu-icon .navicon:before {
+        transform: rotate(-45deg);
+    }
+      
+    header .menu-btn:checked ~ .menu-icon .navicon:after {
+        transform: rotate(45deg);
+    }
+
+    /* fix the positions of the x */
+    header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+    header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+        top: 0;
+    }
+    /* End of Menu Button */
+    /* End of Navigation */
+    /* End of Header */
+
+    /* Points */
+    .point-row img,
+	.point-row .point-container,
+	.point-row:nth-child(even) .point-container{
+		float:none;
+		width:100%;
+	}
+    /* End of Points */
+}
+
+@media screen and (max-width: 768px) {
+} 
